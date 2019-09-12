@@ -23,27 +23,37 @@ A()
 ////////////////////////////////////////////
 
 // Exercise 2
-// const workers =[
-//     {name:'Ali', position: 'HRR'},
-//     {name:'Abu', position: 'IT'}
-// ]
+const workers =[
+    {name:'Ali', position: 'HR'},
+    {name:'Abu', position: 'IT'}
+]
 
-// function C(callback){
-//     setTimeout(()=>{
-//         for(var i in workers){
-//             var abc = workers[i].name
-//             console.log(abc);
-//         }
-//         callback();
-//     },800)
-// }
-// function D(){
-//     setTimeout(() =>{
-//         for(var i in workers){
-//             var xyz = workers[i].position
-//             console.log(xyz);
-//         }
-//     }, 700)
-// }
+function B(){
 
-// C(D);
+    return new Promise ((resolve,reject) =>{
+
+        let error = false;
+
+        if(!error){
+            resolve();
+        }
+        else{
+            reject('Error');
+        }
+    });
+}
+
+function info(){
+    setTimeout(() =>{
+        for(var i in workers){
+            var abc = workers[i].name
+            var xyz = workers[i].position
+            console.log(abc);
+            console.log(xyz);
+        }
+    }, 700)
+}
+
+B()
+.then(info)
+.catch(err => console.log(err));
