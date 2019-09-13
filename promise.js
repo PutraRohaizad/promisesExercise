@@ -1,59 +1,69 @@
-// Exercise 1
-function result(){
-            console.log('Ok')
-    }
+const fetch = require("node-fetch");
 
-function A(){
-   return new Promise ((resolve,reject) => {
+// // Exercise 1
+// function result(){
+//             console.log('Ok')
+//     }
 
-        let error = false;
-        if(!error){
-            resolve();
-        }
-        else{
-            reject('You have an error');
-        }
-    });
-}
+// function A(){
+//    return new Promise ((resolve,reject) => {
 
-A()
-.then(result)
-.catch(err => console.log(err));
+//         let error = false;
+//         if(!error){
+//             resolve();
+//         }
+//         else{
+//             reject('You have an error');
+//         }
+//     });
+// }
 
-////////////////////////////////////////////
+// A()
+// .then(result)
+// .catch(err => console.log(err));
 
-// Exercise 2
-const workers =[
-    {name:'Ali', position: 'HR'},
-    {name:'Abu', position: 'IT'}
-]
+// ////////////////////////////////////////////
 
-function B(){
+// // Exercise 2
+// const workers =[
+//     {name:'Ali', position: 'HR'},
+//     {name:'Abu', position: 'IT'}
+// ]
 
-    return new Promise ((resolve,reject) =>{
+// function B(){
 
-        let error = false;
+//     return new Promise ((resolve,reject) =>{
 
-        if(!error){
-            resolve();
-        }
-        else{
-            reject('Error');
-        }
-    });
-}
+//         let error = false;
 
-function info(){
-    setTimeout(() =>{
-        for(var i in workers){
-            var abc = workers[i].name
-            var xyz = workers[i].position
-            console.log(abc);
-            console.log(xyz);
-        }
-    }, 700)
-}
+//         if(!error){
+//             resolve();
+//         }
+//         else{
+//             reject('Error');
+//         }
+//     });
+// }
 
-B()
-.then(info)
-.catch(err => console.log(err));
+// function info(){
+//     setTimeout(() =>{
+//         for(var i in workers){
+//             var abc = workers[i].name
+//             var xyz = workers[i].position
+//             console.log(abc);
+//             console.log(xyz);
+//         }
+//     }, 700)
+// }
+
+// B()
+// .then(info)
+// .catch(err => console.log(err));
+
+// ////////////////////////////////////////////
+
+// // Exercise 3
+
+const fetchpromise = fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json());
+
+fetchpromise.then(values => console.log(values));

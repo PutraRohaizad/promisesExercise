@@ -1,0 +1,24 @@
+{
+  "name": "promises",
+  "version": "1.0.0",
+  "description": "",
+  "main": "promise.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PutraRohaizad/promisesExercise.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PutraRohaizad/promisesExercise/issues"
+  },
+  "homepage": "https://github.com/PutraRohaizad/promisesExercise#readme",
+  "dependencies": {
+    "es6-promise": "^4.2.8",
+    "isomorphic-fetch": "^2.2.1",
+    "node-fetch": "^2.6.0"
+  }
+}
